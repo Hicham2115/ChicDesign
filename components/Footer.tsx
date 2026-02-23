@@ -94,8 +94,7 @@ const Footer = () => {
             <ul className="flex flex-col gap-3">
               {[
                 { href: "/shop", label: "Shop All" },
-                { href: "/about", label: "About Us" },
-                { href: "/contact", label: "Contact" },
+                { href: "/#contactus", label: "Contact Us" },
               ].map((item) => (
                 <li key={item.href}>
                   <Link

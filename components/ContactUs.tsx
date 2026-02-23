@@ -81,7 +81,7 @@ export default function ContactUs() {
   });
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen" id="contactus">
       {/* ── Hero ── */}
       <section className="relative pt-24 pb-16 px-6 md:px-20 overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">

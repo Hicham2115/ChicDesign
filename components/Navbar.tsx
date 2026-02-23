@@ -46,7 +46,7 @@ const mulish = Mulish({
 const navigationLinks = [
   { active: true, label: "Home", href: "/" },
   { href: "/shop", label: "Shop" },
-  // { href: "#", label: "About Us" },
+  // { href: "/#contactus", label: "Contact" },
 ];
 
 export default function Component() {
