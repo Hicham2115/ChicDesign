@@ -17,7 +17,7 @@ const mulish = Mulish({
 export const metadata: Metadata = {
   title: "Chic Design",
   description:
-    "Chic Design offers a curated collection of handmade bags crafted with love and attention to detail. Explore unique, high-quality bags perfect for fashion-forward individuals, and shop directly online with ease.",
+    "Chic Design offers a curated collection of handmade bags crafted with love and attention to detail.",
 };
 
 export default function RootLayout({
@@ -27,9 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${mulish.className} antialiased `}>
-        {children}
-      </body>
+      <body className={`${mulish.className} antialiased `}>{children}</body>
     </html>
   );
 }
