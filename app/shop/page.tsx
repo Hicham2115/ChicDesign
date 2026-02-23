@@ -7,15 +7,17 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import ProductCard from "@/components/ProductCard";
 import { products } from "@/lib/db";
+import { useSearchParams } from "next/navigation";
 
 function Shop() {
   const data = products;
 
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [sortBy, setSortBy] = useState("featured");
+  const searchParams = useSearchParams();
 
   const categories = ["all", ...new Set(products.map((p) => p.category))];
 
@@ -30,6 +32,11 @@ function Shop() {
     if (sortBy === "name") return a.name.localeCompare(b.name);
     return 0;
   });
+
+  useEffect(() => {
+    const category = searchParams.get("category") ?? "all";
+    setSelectedCategory(category);
+  }, [searchParams]);
 
   return (
     <>
@@ -99,4 +106,10 @@ function Shop() {
   );
 }
 
-export default Shop;
+export default function ShopPage() {
+  return (
+    <Suspense>
+      <Shop />
+    </Suspense>
+  );
+}

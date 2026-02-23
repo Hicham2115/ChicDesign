@@ -24,7 +24,7 @@ const ProductCard = ({
       style={{ fontFamily: "serif" }}
     >
       {/* ── Image ── */}
-      <Link href={`/product/${id}`}>
+      <Link href={`/shop/product/${id}`}>
         <div className="relative aspect-square overflow-hidden bg-[#F7F3EE]">
           <Image
             fill
@@ -58,7 +58,7 @@ const ProductCard = ({
         <div className="h-[1px] bg-[#E5D9C8] group-hover:bg-[#C9A96E]/40 transition-colors duration-500 mb-3" />
 
         {/* Name */}
-        <Link href={`/product/${id}`}>
+        <Link href={`/shop/product/${id}`}>
           <h3 className="font-bold text-xl text-[#2C1F0E] group-hover:text-[#9C6C30] transition-colors duration-300  mb-3">
             {name}
           </h3>
@@ -73,7 +73,7 @@ const ProductCard = ({
 
           {/* Arrow button */}
           <Link
-            href={`/product/${id}`}
+            href={`/shop/product/${id}`}
             className="flex items-center justify-center w-8 h-8 border border-[#C4B49A] text-[#9C8070] hover:border-[#9C6C30] hover:text-[#9C6C30] transition-colors duration-300 rounded-none"
           >
             <svg

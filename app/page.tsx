@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import BestSellers from "@/components/BestSellers";
 import ArtisanSpotlight from "@/components/ArtisanSpotlight";
 import ContactUs from "@/components/ContactUs";
+import Link from "next/link";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -15,7 +16,6 @@ const playfair = Playfair_Display({
 export default function Home() {
   return (
     <div className="min-h-screen ">
-
       {/* Hero Section */}
       <div
         className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] bg-cover bg-center"
@@ -35,16 +35,16 @@ export default function Home() {
             Our curated collection is crafted by skilled artisans, blending
             traditional techniques with modern design.
           </p>
-
-          <Button className="rounded-xs p-6 bg-white text-black hover:bg-black hover:text-white duration-300 ease-in-out  transition-colors  cursor-pointer mt-6 font-bold px-8 ">
-            VIEW SELECTION
-          </Button>
+          <Link href="/shop">
+            <Button className="rounded-xs p-6 bg-white text-black hover:bg-black hover:text-white duration-300 ease-in-out  transition-colors  cursor-pointer mt-6 font-bold px-8 ">
+              VIEW SELECTION
+            </Button>
+          </Link>
         </div>
       </div>
       <BestSellers />
       <ArtisanSpotlight />
       <ContactUs />
-      
     </div>
   );
 }

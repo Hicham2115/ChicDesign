@@ -7,7 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-
+import Link from "next/link";
 import img1 from "@/app/assets/Pics/Bags/IMG-20251120-WA0064.jpg";
 import img2 from "@/app/assets/Pics/Bags/IMG-20251120-WA0063.jpg";
 import img3 from "@/app/assets/Pics/Bags/IMG-20251120-WA0050.jpg";
@@ -32,7 +32,7 @@ function BestSellers() {
           className="group relative overflow-hidden rounded-none px-6 py-5 text-xs tracking-[0.25em] uppercase font-semibold text-white hover:bg-[#4b361a] transition-colors duration-500 cursor-pointer"
           size="sm"
         >
-          <a href="#">SEE ALL BESTSELLERS</a>
+          <Link href="/shop">SEE ALL BESTSELLERS </Link>
         </Button>
       </div>
       <div className="flex justify-center items-center mt-6 px-16">
@@ -69,11 +69,17 @@ function BestSellers() {
           <h2 className="absolute top-10 left-4 text-2xl font-bold text-white">
             Necklaces
           </h2>
-
-          <Button className="group absolute top-80 left-4 rounded-xs p-6 bg-white text-black hover:bg-black hover:text-white duration-300 ease-in-out transition-colors cursor-pointer mt-6 font-bold px-8 flex items-center gap-2">
-            SHOP NECKLACES
-            <MoveRight className="transform transition-transform duration-300 ease-in-out group-hover:translate-x-2" />
-          </Button>
+          <Link
+            href={{
+              pathname: "/shop",
+              query: { category: "Necklaces" },
+            }}
+          >
+            <Button className="group absolute top-80 left-4 rounded-xs p-6 bg-white text-black hover:bg-black hover:text-white duration-300 ease-in-out transition-colors cursor-pointer mt-6 font-bold px-8 flex items-center gap-2">
+              SHOP NECKLACES
+              <MoveRight className="transform transition-transform duration-300 ease-in-out group-hover:translate-x-2" />
+            </Button>
+          </Link>
         </div>
 
         <div className="relative">
@@ -88,10 +94,17 @@ function BestSellers() {
           <h2 className="absolute top-10 left-4 text-2xl font-bold text-white">
             Ties
           </h2>{" "}
-          <Button className="group absolute top-80 left-4 rounded-xs p-6 bg-white text-black hover:bg-black hover:text-white duration-300 ease-in-out transition-colors cursor-pointer mt-6 font-bold px-8 flex items-center gap-2">
-            SHOP TIES
-            <MoveRight className="transform transition-transform duration-300 ease-in-out group-hover:translate-x-2" />
-          </Button>
+          <Link
+            href={{
+              pathname: "/shop",
+              query: { category: "Ties" },
+            }}
+          >
+            <Button className="group absolute top-80 left-4 rounded-xs p-6 bg-white text-black hover:bg-black hover:text-white duration-300 ease-in-out transition-colors cursor-pointer mt-6 font-bold px-8 flex items-center gap-2">
+              SHOP TIES
+              <MoveRight className="transform transition-transform duration-300 ease-in-out group-hover:translate-x-2" />
+            </Button>
+          </Link>
         </div>
 
         <div className="relative">
@@ -106,10 +119,17 @@ function BestSellers() {
           <h2 className="absolute top-10 left-4 text-2xl font-bold text-white">
             Bags
           </h2>{" "}
-          <Button className="group absolute top-80 left-4 rounded-xs p-6 bg-white text-black hover:bg-black hover:text-white duration-300 ease-in-out transition-colors cursor-pointer mt-6 font-bold px-8 flex items-center gap-2">
-            SHOP BAGS
-            <MoveRight className="transform transition-transform duration-300 ease-in-out group-hover:translate-x-2" />
-          </Button>
+          <Link
+            href={{
+              pathname: "/shop",
+              query: { category: "Bags" },
+            }}
+          >
+            <Button className="group absolute top-80 left-4 rounded-xs p-6 bg-white text-black hover:bg-black hover:text-white duration-300 ease-in-out transition-colors cursor-pointer mt-6 font-bold px-8 flex items-center gap-2">
+              SHOP BAGS
+              <MoveRight className="transform transition-transform duration-300 ease-in-out group-hover:translate-x-2" />
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

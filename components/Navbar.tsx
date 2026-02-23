@@ -15,6 +15,21 @@ import {
 } from "@/components/ui/popover";
 
 import logo from "@/app/assets/logo.jpg";
+import { ShoppingCart } from "lucide-react";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Field, FieldGroup } from "@/components/ui/field";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import CartPage from "@/app/cart/page";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -28,11 +43,10 @@ const mulish = Mulish({
   display: "swap",
 });
 
-// Navigation links array to be used in both desktop and mobile menus
 const navigationLinks = [
   { active: true, label: "Home", href: "/" },
   { href: "/shop", label: "Shop" },
-  { href: "#", label: "About Us" },
+  // { href: "#", label: "About Us" },
 ];
 
 export default function Component() {
@@ -83,7 +97,7 @@ export default function Component() {
                     <NavigationMenuItem key={link.label} className="w-full">
                       <NavigationMenuLink
                         asChild
-                        active={link.active}
+                        // active={link.active}
                         className={`${mulish.className} font-semibold py-1.5`}
                       >
                         <Link href={link.href}>{link.label}</Link>
@@ -103,7 +117,7 @@ export default function Component() {
                   <NavigationMenuItem key={link.label}>
                     <NavigationMenuLink
                       asChild
-                      active={link.active}
+                      // active={link.active}
                       className={`${mulish.className} font-semibold py-1.5 hover:underline hover:bg-transparent hover:text-[#9C6C30] transition-colors duration-300`}
                     >
                       <Link href={link.href}>{link.label}</Link>
@@ -126,9 +140,15 @@ export default function Component() {
         </div>
         {/* Right side */}
         <div className="flex items-center gap-2">
-          <Button asChild className="text-sm rounded-sm px-6" size="sm">
-            <Link href="#">Sign In</Link>
-          </Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <ShoppingCart className="cursor-pointer hover:text-[#9C6C30] transition-colors duration-300" />
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">
+              <DialogTitle>{""}</DialogTitle>
+              <CartPage />
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
     </header>

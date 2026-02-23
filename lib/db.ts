@@ -105,9 +105,9 @@ export const products: Product[] = [
     name: "Chic Tie",
     price: 170,
     image: bag4,
-    category: "Bags",
+    category: "Ties",
     description:
-      "A chic and modern bag that effortlessly blends style with functionality. Perfect for everyday use or special occasions.",
+      "A chic and modern tie that effortlessly blends style with functionality. Perfect for everyday use or special occasions.",
     materials: ["Quality Leather", "Modern Hardware", "Spacious Interior"],
     sizes: ["Large"],
   },
@@ -116,9 +116,9 @@ export const products: Product[] = [
     name: "Luxury Tie",
     price: 170,
     image: bag5,
-    category: "Bags",
+    category: "Ties",
     description:
-      "Handcrafted by skilled artisans, this luxury bag showcases exceptional craftsmanship and attention to detail.",
+      "Handcrafted by skilled artisans, this luxury tie showcases exceptional craftsmanship and attention to detail.",
     materials: ["Premium Materials", "Artisan Crafted", "Luxury Finishing"],
     sizes: ["Medium"],
   },

@@ -23,13 +23,17 @@ import img12 from "@/app/assets/Pics/contact.jpg";
 const formSchema = z.object({
   name: z
     .string()
-    .min(2, "Name must be at least 2 characters.")
-    .max(50, "Name must be at most 50 characters."),
-  email: z.string().email("Please enter a valid email address."),
+    .min(1, "Name is required")
+    .min(2, "Name must be at least 2 characters")
+    .max(50, "Name must be at most 50 characters"),
+  email: z
+    .string()
+    .min(1, "Email is required")
+    .email("Please enter a valid email address"),
   message: z
     .string()
-    .min(20, "Message must be at least 20 characters.")
-    .max(500, "Message must be at most 500 characters."),
+    .min(1, "Message is required")
+    .max(500, "Message must be at most 500 characters"),
 });
 
 export default function ContactUs() {
@@ -39,14 +43,40 @@ export default function ContactUs() {
       email: "",
       message: "",
     },
-    validators: {
-      onSubmit: formSchema,
-    },
-    onSubmit: async () => {
-      toast.success("Message sent!", {
-        description: "We'll get back to you within 24 hours.",
-        position: "bottom-right",
-      });
+    onSubmit: async ({ value }) => {
+      const result = formSchema.safeParse(value);
+      if (!result.success) {
+        toast.error("Please fill in all required fields correctly.");
+        return;
+      }
+      try {
+        const response = await fetch("https://formspree.io/f/mdkywdge", {
+          method: "POST",
+          body: JSON.stringify({
+            ...value,
+            _subject: "شخص ما أرسل لك رسالة من موقع Chic Design",
+          }),
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+        });
+
+        if (response.ok) {
+          toast.success("Message sent!", {
+            description: "Thank You For Your Message.",
+            position: "bottom-right",
+          });
+          form.reset();
+        } else {
+          throw new Error("Failed to send message");
+        }
+      } catch (error) {
+        toast.error("Failed to send message", {
+          description: "Please try again or contact us directly via email.",
+        });
+      } finally {
+      }
     },
   });
 

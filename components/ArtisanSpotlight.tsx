@@ -3,6 +3,7 @@ import img10 from "@/app/assets/Pics/bag10.jpg";
 import img11 from "@/app/assets/Pics/bag11.jpg";
 import img12 from "@/app/assets/Pics/bag12.jpg";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 function ArtisanSpotlight() {
   return (
@@ -40,9 +41,12 @@ function ArtisanSpotlight() {
             with precision and attention to detail.
           </p>
           <div className="mt-4">
-            <Button className="group relative overflow-hidden rounded-none px-10 py-5 text-xs tracking-[0.25em] uppercase font-semibold text-white hover:bg-[#4b361a] transition-colors duration-500 cursor-pointer">
-              Discover Collection
-            </Button>
+            <Link href="/shop">
+              {" "}
+              <Button className="group relative overflow-hidden rounded-none px-10 py-5 text-xs tracking-[0.25em] uppercase font-semibold text-white hover:bg-[#4b361a] transition-colors duration-500 cursor-pointer">
+                Discover Collection
+              </Button>
+            </Link>
           </div>
         </div>
 

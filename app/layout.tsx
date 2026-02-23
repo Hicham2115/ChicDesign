@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Navbar from "@/components/Navbar";
 import Providers from "@/app/providers";
+import { Toaster } from "@/components/ui/sonner";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -33,10 +34,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${mulish.className} antialiased `}>
         <Navbar />
-        <Providers >{children}</Providers>
+        <Providers>{children}</Providers>
 
         <WhatsAppButton />
         <Footer />
+        <Toaster />
       </body>
     </html>
   );
