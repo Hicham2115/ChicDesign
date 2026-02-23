@@ -1,9 +1,10 @@
 import Image from "next/image";
-import Navbar from "@/components/Navbar";
 import hero from "@/app/assets/hero.jpg";
 import { Playfair_Display, Mulish } from "next/font/google";
 import { Button } from "@/components/ui/button";
 import BestSellers from "@/components/BestSellers";
+import ArtisanSpotlight from "@/components/ArtisanSpotlight";
+import ContactUs from "@/components/ContactUs";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -14,7 +15,6 @@ const playfair = Playfair_Display({
 export default function Home() {
   return (
     <div className="min-h-screen ">
-      <Navbar />
 
       {/* Hero Section */}
       <div
@@ -42,6 +42,9 @@ export default function Home() {
         </div>
       </div>
       <BestSellers />
+      <ArtisanSpotlight />
+      <ContactUs />
+      
     </div>
   );
 }

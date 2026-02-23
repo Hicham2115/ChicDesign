@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Mulish } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import Navbar from "@/components/Navbar";
+import Providers from "@/app/providers";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -27,7 +31,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${mulish.className} antialiased `}>{children}</body>
+      <body className={`${mulish.className} antialiased `}>
+        <Navbar />
+        <Providers >{children}</Providers>
+
+        <WhatsAppButton />
+        <Footer />
+      </body>
     </html>
   );
 }

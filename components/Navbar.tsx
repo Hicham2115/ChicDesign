@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Playfair_Display, Mulish } from "next/font/google";
 import { Button } from "@/components/ui/button";
 import {
@@ -29,9 +30,9 @@ const mulish = Mulish({
 
 // Navigation links array to be used in both desktop and mobile menus
 const navigationLinks = [
-  { active: true, label: "Home" },
+  { active: true, label: "Home", href: "/" },
+  { href: "/shop", label: "Shop" },
   { href: "#", label: "About Us" },
-  { href: "#", label: "Contact Us" },
 ];
 
 export default function Component() {
@@ -81,11 +82,11 @@ export default function Component() {
                   {navigationLinks.map((link, _index) => (
                     <NavigationMenuItem key={link.label} className="w-full">
                       <NavigationMenuLink
+                        asChild
                         active={link.active}
-                        href={link.href}
                         className={`${mulish.className} font-semibold py-1.5`}
                       >
-                        {link.label}
+                        <Link href={link.href}>{link.label}</Link>
                       </NavigationMenuLink>
                     </NavigationMenuItem>
                   ))}
@@ -101,11 +102,11 @@ export default function Component() {
                 {navigationLinks.map((link, _index) => (
                   <NavigationMenuItem key={link.label}>
                     <NavigationMenuLink
+                      asChild
                       active={link.active}
-                      className={`${mulish.className} font-semibold py-1.5`}
-                      href={link.href}
+                      className={`${mulish.className} font-semibold py-1.5 hover:underline hover:bg-transparent hover:text-[#9C6C30] transition-colors duration-300`}
                     >
-                      {link.label}
+                      <Link href={link.href}>{link.label}</Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
                 ))}
@@ -114,17 +115,19 @@ export default function Component() {
           </div>
         </div>
         <div className="absolute left-1/2 -translate-x-1/2 font-semibold text-lg flex gap-2 items-center">
-          <a className="text-primary hover:text-primary/90" href="#">
+          <Link className="text-primary hover:text-primary/90" href="/">
             <Image src={logo} alt="Chic Design Logo" width={60} height={60} />
-          </a>
-          <h2 className={`${playfair.className} text-2xl font-bold`}>
+          </Link>
+          <h2
+            className={`${playfair.className} text-2xl font-bold cursor-pointer hover:text-[#9C6C30] transition-colors duration-300`}
+          >
             Chic Design
           </h2>
         </div>
         {/* Right side */}
         <div className="flex items-center gap-2">
           <Button asChild className="text-sm rounded-sm px-6" size="sm">
-            <a href="#">Sign In</a>
+            <Link href="#">Sign In</Link>
           </Button>
         </div>
       </div>

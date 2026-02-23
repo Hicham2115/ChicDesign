@@ -27,7 +27,11 @@ function BestSellers() {
     <div>
       <div className="flex justify-between items-center mt-20 px-16">
         <h1 className="font-bold text-xl ">Best Sellers</h1>
-        <Button asChild className="text-sm  px-6 py-5 rounded-xs" size="sm">
+        <Button
+          asChild
+          className="group relative overflow-hidden rounded-none px-6 py-5 text-xs tracking-[0.25em] uppercase font-semibold text-white hover:bg-[#4b361a] transition-colors duration-500 cursor-pointer"
+          size="sm"
+        >
           <a href="#">SEE ALL BESTSELLERS</a>
         </Button>
       </div>
@@ -51,7 +55,7 @@ function BestSellers() {
         </Carousel>
       </div>
 
-      <div className="flex justify-center items-center mt-6 px-10 mb-6">
+      <div className="flex justify-center items-center flex-wrap md:flex-nowrap mt-6 px-10 mb-6">
         <div className="relative">
           <div className="absolute inset-0 bg-black/20 "></div>
 
