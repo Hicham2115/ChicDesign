@@ -29,7 +29,7 @@ function BestSellers() {
         <h1 className="font-bold text-xl ">Best Sellers</h1>
         <Button
           asChild
-          className="group relative overflow-hidden rounded-none px-6 py-5 text-xs tracking-[0.25em] uppercase font-semibold text-white hover:bg-[#4b361a] transition-colors duration-500 cursor-pointer"
+          className="group relative overflow-hidden rounded-none md:px-6 px-2 py-5 text-xs tracking-[0.25em] uppercase font-semibold text-white hover:bg-[#4b361a] transition-colors duration-500 cursor-pointer"
           size="sm"
         >
           <Link href="/shop">SEE ALL BESTSELLERS </Link>

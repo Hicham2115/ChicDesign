@@ -358,7 +358,7 @@ export const products: Product[] = [
   {
     id: "41",
     name: "Classic Duffle Bag",
-    price: 180,
+    price: 350,
     image: bag29,
     category: "Bags",
     description: "A stylish and elegant bag for everyday use.",

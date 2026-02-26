@@ -58,7 +58,7 @@ function ArtisanSpotlight() {
               src={img12}
               alt="Artisan Bag"
               fill
-              className="object-fit group-hover:scale-105 transition-transform duration-700 ease-in-out"
+              className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#2C1F0E]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           </div>
