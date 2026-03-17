@@ -181,6 +181,11 @@ const ProductDetail = () => {
               >
                 ADD TO CART
               </Button>
+              <Link href="/checkout">
+                <Button className="mt-6 ml-4 rounded-none px-6 py-5 text-xs tracking-[0.25em] uppercase font-semibold text-white hover:bg-[#4b361a] transition-colors duration-500 cursor-pointer">
+                  Checkout
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

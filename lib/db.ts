@@ -53,6 +53,13 @@ import necklace3 from "@/app/assets/Pics/Necklesses/IMG-20251122-WA0019.jpg";
 import necklace4 from "@/app/assets/Pics/Necklesses/IMG-20251122-WA0020.jpg";
 import necklace5 from "@/app/assets/Pics/Necklesses/IMG-20251122-WA0021.jpg";
 import necklace6 from "@/app/assets/Pics/Necklesses/IMG-20251122-WA0022.jpg";
+
+import newBag16 from "@/app/assets/Pics/Bags/WhatsApp1.jpeg";
+import newBag17 from "@/app/assets/Pics/Bags/Whatssap2.jpeg";
+import newBag18 from "@/app/assets/Pics/Bags/Whatssap3.jpeg";
+import newBag19 from "@/app/assets/Pics/Bags/Whatssap4.jpeg";
+import newBag20 from "@/app/assets/Pics/Bags/Whatssap5.jpeg";
+
 import { StaticImageData } from "next/image";
 
 export type Product = {
@@ -217,7 +224,7 @@ export const products: Product[] = [
   {
     id: "18",
     name: "Beautiful Artisan Bag",
-    price: 280,
+    price: 350,
     image: bag14,
     category: "Bags",
     description:
@@ -557,14 +564,56 @@ export const products: Product[] = [
   },
   {
     id: "61",
-    name: "Stylish Messenger Bag",
-    price: 180,
+    name: "Elegant Evening Clutch",
+    price: 350,
     image: newBag15,
     category: "Bags",
     description: "A stylish and elegant bag for everyday use.",
     materials: ["Leather", "Canvas"],
     sizes: ["Medium"],
   },
+
+  {
+    id: "62",
+    name: "Stylish Messenger Bag",
+    price: 400,
+    image: newBag16,
+    category: "Bags",
+    description: "A stylish and elegant bag for everyday use.",
+    materials: ["Leather", "Canvas"],
+    sizes: ["Medium"],
+  },
+  {
+    id: "63",
+    name: "Chic Shoulder Bag",
+    price: 280,
+    image: newBag17,
+    category: "Bags",
+    description: "A stylish and elegant bag for everyday use.",
+    materials: ["Leather", "Canvas"],
+    sizes: ["Medium"],
+  },
+  {
+    id: "64",
+    name: "Stylish Bucket Bag",
+    price: 500,
+    image: newBag18,
+    category: "Bags",
+    description: "A stylish and elegant bag for everyday use.",
+    materials: ["Leather", "Canvas"],
+    sizes: ["Medium"],
+  },
+  {
+    id: "65",
+    name: "Luxury Top Handle Bag",
+    price: 500,
+    image: newBag19,
+    category: "Bags",
+    description: "A stylish and elegant bag for everyday use.",
+    materials: ["Leather", "Canvas"],
+    sizes: ["Medium"],
+  },
+
   {
     id: "34",
     name: "Stylish Necklace",
@@ -572,6 +621,16 @@ export const products: Product[] = [
     image: bag22,
     category: "Necklaces",
     description: "A stylish and elegant necklace for everyday use.",
+    materials: ["Leather", "Canvas"],
+    sizes: ["Medium"],
+  },
+  {
+    id: "66",
+    name: "Elegant Frame Bag",
+    price: 400,
+    image: newBag20,
+    category: "Bags",
+    description: "A stylish and elegant bag for everyday use.",
     materials: ["Leather", "Canvas"],
     sizes: ["Medium"],
   },

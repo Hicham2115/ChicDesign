@@ -16,6 +16,8 @@ const formSchema = z.object({
 
 export default function CheckoutPage() {
   const { cart, getTotal, clearCart } = useCartStore();
+  console.log(cart);
+
   const [isSuccess, setIsSuccess] = useState(false);
 
   const form = useForm({
@@ -32,20 +34,16 @@ export default function CheckoutPage() {
         return;
       }
       try {
-        const response = await fetch("https://formspree.io/f/mdkywdge", {
+        const response = await fetch("/api/send-order", {
           method: "POST",
-          body: JSON.stringify({
-            ...value,
-            _subject: "طلب جديد من موقع Chic Design",
-            cart: cart
-              .map((i) => `${i.name} x${i.quantity} — ${i.price} DH`)
-              .join("\n"),
-            total: `${getTotal().toFixed(2)} DH`,
-          }),
           headers: {
-            Accept: "application/json",
             "Content-Type": "application/json",
           },
+          body: JSON.stringify({
+            ...value,
+            cart,
+            total: getTotal().toFixed(2),
+          }),
         });
 
         if (response.ok) {
@@ -143,7 +141,12 @@ export default function CheckoutPage() {
             {/* Name */}
             <form.Field
               name="name"
-              validators={{ onBlur: ({ value }) => value.length < 2 ? "Name must be at least 2 characters" : undefined }}
+              validators={{
+                onBlur: ({ value }) =>
+                  value.length < 2
+                    ? "Name must be at least 2 characters"
+                    : undefined,
+              }}
             >
               {(field) => (
                 <div>
@@ -158,7 +161,9 @@ export default function CheckoutPage() {
                     onBlur={field.handleBlur}
                   />
                   {field.state.meta.errors[0] && (
-                    <p className="field-error">{String(field.state.meta.errors[0])}</p>
+                    <p className="field-error">
+                      {String(field.state.meta.errors[0])}
+                    </p>
                   )}
                 </div>
               )}
@@ -167,7 +172,12 @@ export default function CheckoutPage() {
             {/* Email */}
             <form.Field
               name="email"
-              validators={{ onBlur: ({ value }) => !/^[^@]+@[^@]+\.[^@]+$/.test(value) ? "Please enter a valid email address" : undefined }}
+              validators={{
+                onBlur: ({ value }) =>
+                  !/^[^@]+@[^@]+\.[^@]+$/.test(value)
+                    ? "Please enter a valid email address"
+                    : undefined,
+              }}
             >
               {(field) => (
                 <div>
@@ -183,7 +193,9 @@ export default function CheckoutPage() {
                     onBlur={field.handleBlur}
                   />
                   {field.state.meta.errors[0] && (
-                    <p className="field-error">{String(field.state.meta.errors[0])}</p>
+                    <p className="field-error">
+                      {String(field.state.meta.errors[0])}
+                    </p>
                   )}
                 </div>
               )}
@@ -192,7 +204,10 @@ export default function CheckoutPage() {
             {/* Phone */}
             <form.Field
               name="phone"
-              validators={{ onBlur: ({ value }) => value.length < 6 ? "Phone number is required" : undefined }}
+              validators={{
+                onBlur: ({ value }) =>
+                  value.length < 6 ? "Phone number is required" : undefined,
+              }}
             >
               {(field) => (
                 <div>
@@ -208,7 +223,9 @@ export default function CheckoutPage() {
                     onBlur={field.handleBlur}
                   />
                   {field.state.meta.errors[0] && (
-                    <p className="field-error">{String(field.state.meta.errors[0])}</p>
+                    <p className="field-error">
+                      {String(field.state.meta.errors[0])}
+                    </p>
                   )}
                 </div>
               )}
@@ -222,7 +239,10 @@ export default function CheckoutPage() {
             {/* Address */}
             <form.Field
               name="address"
-              validators={{ onBlur: ({ value }) => value.length < 5 ? "Address is required" : undefined }}
+              validators={{
+                onBlur: ({ value }) =>
+                  value.length < 5 ? "Address is required" : undefined,
+              }}
             >
               {(field) => (
                 <div>
@@ -237,7 +257,9 @@ export default function CheckoutPage() {
                     onBlur={field.handleBlur}
                   />
                   {field.state.meta.errors[0] && (
-                    <p className="field-error">{String(field.state.meta.errors[0])}</p>
+                    <p className="field-error">
+                      {String(field.state.meta.errors[0])}
+                    </p>
                   )}
                 </div>
               )}
