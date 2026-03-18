@@ -586,7 +586,7 @@ export const products: Product[] = [
   {
     id: "63",
     name: "Chic Shoulder Bag",
-    price: 280,
+    price: 300,
     image: newBag17,
     category: "Bags",
     description: "A stylish and elegant bag for everyday use.",
