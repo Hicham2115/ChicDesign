@@ -64,6 +64,9 @@ import newBag21 from "@/app/assets/Pics/Bags/WhatsApp Image 2026-04-11 at 18.25.
 import newBag22 from "@/app/assets/Pics/Bags/WhatsApp Image 2026-04-11 at 18.25.49.jpeg";
 import newBag23 from "@/app/assets/Pics/Bags/WhatsApp Image 2026-04-11 at 18.39.34.jpeg";
 
+import newBag24 from "@/app/assets/Pics/Bags/WhatsApp Image 2026-05-04 at 23.48.47.jpeg";
+import newBag25 from "@/app/assets/Pics/Bags/WhatsApp Image 2026-05-04 at 23.48.48.jpeg";
+
 import { StaticImageData } from "next/image";
 
 export type Product = {
@@ -759,6 +762,26 @@ export const products: Product[] = [
     name: "Luxury Top Handle Bag",
     price: 70,
     image: newBag23,
+    category: "Bags",
+    description: "A stylish and elegant bag for everyday use.",
+    materials: ["Leather", "Canvas"],
+    sizes: ["Medium"],
+  },
+  {
+    id: "73",
+    name: "Luxury Top Handle Bag",
+    price: 70,
+    image: newBag24,
+    category: "Bags",
+    description: "A stylish and elegant bag for everyday use.",
+    materials: ["Leather", "Canvas"],
+    sizes: ["Medium"],
+  },
+  {
+    id: "74",
+    name: "Luxury Top Handle Bag",
+    price: 70,
+    image: newBag25,
     category: "Bags",
     description: "A stylish and elegant bag for everyday use.",
     materials: ["Leather", "Canvas"],
