@@ -770,7 +770,7 @@ export const products: Product[] = [
   {
     id: "73",
     name: "Luxury Top Handle Bag",
-    price: 70,
+    price: 280,
     image: newBag24,
     category: "Bags",
     description: "A stylish and elegant bag for everyday use.",
@@ -780,7 +780,7 @@ export const products: Product[] = [
   {
     id: "74",
     name: "Luxury Top Handle Bag",
-    price: 70,
+    price: 280,
     image: newBag25,
     category: "Bags",
     description: "A stylish and elegant bag for everyday use.",
