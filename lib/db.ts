@@ -63,9 +63,13 @@ import newBag20 from "@/app/assets/Pics/Bags/Whatssap5.jpeg";
 import newBag21 from "@/app/assets/Pics/Bags/WhatsApp Image 2026-04-11 at 18.25.49 (1).jpeg";
 import newBag22 from "@/app/assets/Pics/Bags/WhatsApp Image 2026-04-11 at 18.25.49.jpeg";
 import newBag23 from "@/app/assets/Pics/Bags/WhatsApp Image 2026-04-11 at 18.39.34.jpeg";
-
 import newBag24 from "@/app/assets/Pics/Bags/WhatsApp Image 2026-05-04 at 23.48.47.jpeg";
 import newBag25 from "@/app/assets/Pics/Bags/WhatsApp Image 2026-05-04 at 23.48.48.jpeg";
+
+import newBag26 from "@/app/assets/Pics/Bags/WhatsApp Image 2026-05-06 at 13.50.45.jpeg";
+import newBag27 from "@/app/assets/Pics/Bags/WhatsApp Image 2026-05-06 at 13.51.28.jpeg";
+import newBag28 from "@/app/assets/Pics/Bags/WhatsApp Image 2026-05-06 at 13.52.45.jpeg";
+import newBag29 from "@/app/assets/Pics/Bags/WhatsApp Image 2026-05-06 at 13.59.51.jpeg";
 
 import { StaticImageData } from "next/image";
 
@@ -782,6 +786,46 @@ export const products: Product[] = [
     name: "Luxury Top Handle Bag",
     price: 280,
     image: newBag25,
+    category: "Bags",
+    description: "A stylish and elegant bag for everyday use.",
+    materials: ["Leather", "Canvas"],
+    sizes: ["Medium"],
+  },
+  {
+    id: "75",
+    name: "Luxury Top Handle Bag",
+    price: 250,
+    image: newBag26,
+    category: "Bags",
+    description: "A stylish and elegant bag for everyday use.",
+    materials: ["Leather", "Canvas"],
+    sizes: ["Medium"],
+  },
+  {
+    id: "76",
+    name: "Designer Drawstring Bag",
+    price: 250,
+    image: newBag27,
+    category: "Bags",
+    description: "A stylish and elegant bag for everyday use.",
+    materials: ["Leather", "Canvas"],
+    sizes: ["Medium"],
+  },
+  {
+    id: "77",
+    name: "Elegant Frame Bag",
+    price: 450,
+    image: newBag28,
+    category: "Bags",
+    description: "A stylish and elegant bag for everyday use.",
+    materials: ["Leather", "Canvas"],
+    sizes: ["Medium"],
+  },
+  {
+    id: "78",
+    name: "Classic Duffle Bag",
+    price: 150,
+    image: newBag29,
     category: "Bags",
     description: "A stylish and elegant bag for everyday use.",
     materials: ["Leather", "Canvas"],
