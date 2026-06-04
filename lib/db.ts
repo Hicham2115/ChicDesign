@@ -70,6 +70,8 @@ import newBag26 from "@/app/assets/Pics/Bags/WhatsApp Image 2026-05-06 at 13.50.
 import newBag27 from "@/app/assets/Pics/Bags/WhatsApp Image 2026-05-06 at 13.51.28.jpeg";
 import newBag28 from "@/app/assets/Pics/Bags/WhatsApp Image 2026-05-06 at 13.52.45.jpeg";
 import newBag29 from "@/app/assets/Pics/Bags/WhatsApp Image 2026-05-06 at 13.59.51.jpeg";
+import newBag30 from "@/app/assets/Pics/Bags/WhatsApp Image 2026-06-03 at 14.06.57.jpeg";
+import newBag31 from "@/app/assets/Pics/Bags/WhatsApp Image 2026-06-03 at 14.06.58.jpeg";
 
 import { StaticImageData } from "next/image";
 
@@ -826,6 +828,26 @@ export const products: Product[] = [
     name: "Classic Duffle Bag",
     price: 150,
     image: newBag29,
+    category: "Bags",
+    description: "A stylish and elegant bag for everyday use.",
+    materials: ["Leather", "Canvas"],
+    sizes: ["Medium"],
+  },
+  {
+    id: "79",
+    name: "Chic Handcrafted Bag",
+    price: 300,
+    image: newBag30,
+    category: "Bags",
+    description: "A stylish and elegant bag for everyday use.",
+    materials: ["Leather", "Canvas"],
+    sizes: ["Medium"],
+  },
+  {
+    id: "80",
+    name: "Elegant Designer Bag",
+    price: 300,
+    image: newBag31,
     category: "Bags",
     description: "A stylish and elegant bag for everyday use.",
     materials: ["Leather", "Canvas"],
